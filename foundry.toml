@@ -1,0 +1,24 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+fs_permissions = [{ access = "read", path = "./"}]
+remappings =[
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "@openzeppelin/contracts-upgradeable=lib/openzeppelin-contracts-upgradeable/contracts/",
+  "@structs/=src/structs/",
+  "@strategy/=src/contracts/strategy/",
+  "@vault/=src/contracts/vault/",
+  "@tokens/=src/contracts/tokens/",
+  "@farm/=src/contracts/farm/",
+  "@=src/contracts/",
+  "@mocks/=src/mocks/"
+  ]
+
+[rpc_endpoints]
+goerli = "${GOERLI_RPC_URL}"
+
+[etherscan]
+goerli = { key = "${ETHERSCAN_API_KEY}" }
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
